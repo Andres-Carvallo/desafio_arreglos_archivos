@@ -1,10 +1,6 @@
 
-data = open('ventas_base.db').read.chomp.split(',')
-new_array = []
-n = data.count
-n.times do |i|
-    new_array.push data[i].to_f
-end
+new_dat = open('ventas_base.db').read.chomp.split(',')
+
 
 def proyections(new_array)
     proyection1 = []
@@ -40,4 +36,4 @@ def proyections(new_array)
     end
 end
 
-proyections(new_array)
+proyections(new_dat)
